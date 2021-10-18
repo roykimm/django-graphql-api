@@ -11,7 +11,7 @@ class Boards(models.Model):
     parent_no = models.IntegerField(db_column='parent_no', default=0)
     b_count = models.IntegerField(db_column='b_count', default=0)
     b_date = models.DateTimeField(db_column='b_date',)
-    usage_flag = models.CharField(db_column='usage_flag', max_length=10)
+    usage_flag = models.CharField(db_column='usage_flag', max_length=10, default='1')
 
     def __str__(self):
         return f"제목 : {self.b_title} , 작성자 : {self.b_writer}"
